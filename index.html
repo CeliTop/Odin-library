@@ -7,6 +7,13 @@
     <title>Library</title>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
@@ -14,14 +21,20 @@
       <h2>Add books to your virtual library and track your reading</h2>
     </header>
     <div class="sidebar">
-      <button>Add a book</button>
+      <button class="add">Add a book</button>
       <form action="">
         <label for="name">Name:</label>
-        <input type="text" id="name" value="name" />
+        <input type="text" id="name" name="name" />
         <label for="author">Author:</label>
-        <input type="text" id="author" value="author" />
+        <input type="text" id="author" name="author" />
         <label for="pages">Number of pages:</label>
-        <input type="number" id="pages" value="nbOfPages" />
+        <input type="number" id="pages" name="nbOfPages" />
+        <div>
+          <button class="back">
+            <div class="back-char"></div>
+          </button>
+          <button class="confirm">Perfect</button>
+        </div>
       </form>
       <div class="log">
         <h3>Library log</h3>
@@ -33,27 +46,27 @@
     <main>
       <div class="tile">
         <h4>A book name</h4>
-        <p>Author: An author</p>
-        <p>Number of pages:</p>
-        <button class="toggle">Read</button>
+        <p class="author">Author: An author</p>
+        <p class="nop">Number of pages:</p>
+        <button class="toggle">Unread</button>
       </div>
       <div class="tile">
         <h4>A book name</h4>
-        <p>Author: An author</p>
-        <p>Number of pages:</p>
-        <button class="toggle">Read</button>
+        <p class="author">Author: An author</p>
+        <p class="nop">Number of pages:</p>
+        <button class="toggle read">Read</button>
       </div>
       <div class="tile">
         <h4>A book name</h4>
-        <p>Author: An author</p>
-        <p>Number of pages:</p>
-        <button class="toggle">Read</button>
+        <p class="author">Author: An author</p>
+        <p class="nop">Number of pages:</p>
+        <button class="toggle">Unread</button>
       </div>
       <div class="tile">
         <h4>A book name</h4>
-        <p>Author: An author</p>
-        <p>Number of pages:</p>
-        <button class="toggle">Read</button>
+        <p class="author">Author: An author</p>
+        <p class="nop">Number of pages:</p>
+        <button class="toggle read">Read</button>
       </div>
     </main>
   </body>
