@@ -20,6 +20,7 @@
       <h1>Library</h1>
       <h2>Add books to your virtual library and track your reading</h2>
     </header>
+
     <div class="sidebar">
       <button class="add">Add a book</button>
       <form action="">
@@ -28,8 +29,16 @@
         <label for="author">Author:</label>
         <input type="text" id="author" name="author" />
         <label for="pages">Number of pages:</label>
-        <input type="number" id="pages" name="nbOfPages" />
-        <div>
+        <div class="thirdline">
+          <input type="number" id="pages" name="nbOfPages" />
+          <div class="toggle-read">
+            <div class="slide">
+              <p>Unread</p>
+              <p>Read</p>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-buttons">
           <button class="back">
             <div class="back-char"></div>
           </button>
@@ -43,6 +52,7 @@
         <div class="unread">Unread:</div>
       </div>
     </div>
+
     <main>
       <div class="tile">
         <h4>A book name</h4>
