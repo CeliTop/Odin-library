@@ -25,12 +25,12 @@
       <button class="add">Add a book</button>
       <form action="">
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" />
+        <input type="text" id="name" name="name" required />
         <label for="author">Author:</label>
-        <input type="text" id="author" name="author" />
+        <input type="text" id="author" name="author" required />
         <label for="pages">Number of pages:</label>
         <div class="thirdline">
-          <input type="number" id="pages" name="nbOfPages" />
+          <input type="number" id="pages" name="nbOfPages" required />
           <div class="toggle-read">
             <div class="slide">
               <p>Unread</p>
@@ -39,17 +39,17 @@
           </div>
         </div>
         <div class="bottom-buttons">
-          <button class="back">
+          <button type="button" class="back">
             <div class="back-char"></div>
           </button>
-          <button class="confirm">Perfect</button>
+          <button type="submit" class="confirm">Perfect</button>
         </div>
       </form>
       <div class="log">
         <h3>Library log</h3>
-        <div class="total">Total books:</div>
-        <div class="read">Read:</div>
-        <div class="unread">Unread:</div>
+        <p class="total">Total books:</p>
+        <p class="read">Read:</p>
+        <p class="unread">Unread:</p>
       </div>
     </div>
 
