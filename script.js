@@ -1,3 +1,4 @@
+//Getting the books data
 const JsonData = JSON.parse(localStorage.getItem("books")) || [];
 const books = JsonData.map((element) => {
   return new Book(
@@ -15,7 +16,14 @@ const addButton = document.querySelector(".add");
 const backButton = document.querySelector(".back");
 const confirmButton = document.querySelector(".confirm");
 const main = document.querySelector("main");
+const log = document.querySelector(".log");
+const dataElements = {
+  total: log.querySelector(".total"),
+  read: log.querySelector(".read"),
+  unread: log.querySelector(".unread"),
+};
 
+//Constructor
 function Book(name, author, pages, read, index) {
   this.name = name;
   this.author = author;
@@ -63,6 +71,7 @@ function displayBooks(books) {
     </div>`;
   });
   main.innerHTML = divsCode;
+  changeLogs(books);
 }
 
 function switchToggle(target) {
@@ -76,6 +85,7 @@ function switchToggle(target) {
   );
   books[target.parentElement.dataset.index].changeReadStatus();
   localStorage.setItem("books", JSON.stringify(books));
+  changeLogs(books);
 }
 
 function changeReadClass(target) {
@@ -84,6 +94,23 @@ function changeReadClass(target) {
   } else {
     target.classList.add("read");
   }
+}
+
+function changeLogs(books) {
+  let total = 0,
+    read = 0,
+    unread = 0;
+  const datas = books.reduce((_, book) => {
+    total++;
+    if (book.read) {
+      read++;
+    } else {
+      unread++;
+    }
+  }, 0);
+  dataElements.total.innerText = `Total: ${total}`;
+  dataElements.read.innerText = `Read: ${read}`;
+  dataElements.unread.innerText = `Unread: ${unread}`;
 }
 
 //Display

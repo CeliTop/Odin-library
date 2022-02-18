@@ -55,6 +55,7 @@ form {
   flex-direction: column;
   margin-bottom: 1em;
   border-bottom: 1px solid white;
+  padding: 4px; /* For the outline */
   overflow: hidden;
   height: 0;
 }
@@ -252,4 +253,8 @@ h4 {
   width: 1em;
   height: auto;
   display: block;
+}
+
+:is(input, button):focus-visible {
+  outline: 4px solid black;
 }
